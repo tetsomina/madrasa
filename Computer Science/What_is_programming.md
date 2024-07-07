@@ -1,4 +1,4 @@
-Title: 'What Is a Programming Language?'
+# What Is a Programming Language?
 
 Programming is giving a set of instructions to a computer to execute.
 Programming is the mental process of thinking up instructions to give to a machine (like a computer).
@@ -7,17 +7,20 @@ Coding is the process of transforming those ideas into a written language that a
 Programming languages are the tools we use to write instructions for computers to follow. Computers “think” in binary — strings of 1s and 0s. Programming languages allow us to translate the 1s and 0s into something that humans can understand and write. A programming language is made up of a series of symbols that serves as a bridge that allow humans to translate our thoughts into instructions computers can understand.
 
 ##### Hello World
-`python
-my_name = "YoMama"
-print("Hello and welcome " + my_name + "!")`
 
-Title: 'Strings'
+```py
+my_name = "YoMama"
+print("Hello and welcome " + my_name + "!")
+```
+
+---
+# Strings
 
 Computer programmers refer to blocks of text as strings. In computer science, sequences of characters are referred to as strings. A string is a sequence of characters contained within a pair of single quotes (') or double quotes("). Strings can store words, sentences, or whole paragraphs. Strings can be any length and can include any character such as:
-    Letters
-    Numbers
-    Symbols
-    Whitespace (spaces, tabs, new lines)
+Letters
+Numbers
+Symbols
+Whitespace (spaces, tabs, new lines)
 
 They are usually contained within a pair of 'single quotes' or "double quotes".
 
@@ -32,9 +35,8 @@ address = block_number + ' ' + street_name
 print(address)
 ```
 
-
-
 #### How can I use quotes inside of a string?
+
 Vary your use of single quotes vs double quotes:
 
 ```py
@@ -47,7 +49,9 @@ Another way to use special character inside strings is to use the sequence escap
 print(“Then there he stood, surveying the crop fields before saying \“We have an infestation\””)
 ```
 
-Title: 'Method'
+---
+# Method
+
 
 **Methods** are the "behavior" part of the class. When an instance variable is created from a class, it has access to the class's associated methods. Methods can accept parameters (sometimes they're called "arguments") and can return a result.
 
@@ -85,12 +89,12 @@ class Character:
     self.movex += x
 ```
 
+---
+# Variable
 
-Title: 'Variable'
+A variable is used to store data that will be used by the program. This data can be a number, a string, a Boolean, a list or some other data type. Every variable has a name which can consist of letters, numbers, and the underscore character `_`.
 
-A variable is used to store data that will be used by the program. This data can be a number, a string, a Boolean, a list or some other data type. Every variable has a name which can consist of letters, numbers, and the underscore character ```_```.
-
-The equal sign ```=``` is used to assign a value to a variable. After the initial assignment is made, the value of a variable can be updated to new values as needed.
+The equal sign `=` is used to assign a value to a variable. After the initial assignment is made, the value of a variable can be updated to new values as needed.
 
 ## Variable Names
 
@@ -102,7 +106,8 @@ Rules for Python variables:
 - A variable name can only contain alpha-numeric characters and underscores (`A`-`z`, `0`-`9`, and `_`).
 - Variable names are case-sensitive (`num`, `Num`, and `NUM` are three different variables).
 
-Title: 'Operators'
+---
+# Operators
 
 Operators are used to perform various operations on variables and values. The standard arithmetic and assignment operators are the most familiar.
 
@@ -184,7 +189,8 @@ Python evaluates an expression in order of precedence as follows:
 
 **Note:** Items at the same precedence are evaluated left to right. The exception to this is exponentiation, which evaluates right to left.
 
-Title: 'Errors'
+---
+# Errors
 
 Humans are prone to making mistakes. Humans are also typically in charge of creating computer programs. To compensate, programming languages attempt to understand and explain mistakes made in their programs.
 
@@ -195,7 +201,6 @@ Two common errors that we encounter while writing Python are SyntaxError and Nam
 - `SyntaxError` means there is something wrong with the way your program is written — punctuation that does not belong, a command where it is not expected, or a missing parenthesis can all trigger a SyntaxError.
 
 - A `NameError` occurs when the Python interpreter sees a word it does not recognize. Code that contains something that looks like a variable but was never defined will throw a NameError.
-
 
 The two types of **errors** in Python are syntax errors and exceptions.
 
@@ -212,7 +217,7 @@ SyntaxError: invalid syntax
 
 The parser repeats the offending line and displays a little arrow `^` pointing at the earliest point in the line where the error was detected.
 
-The error is caused by (or at least detected at) the token preceding the arrow in the example, the error is detected at the [`print()`](https://www.codecademy.com/resources/docs/python/built-in-functions/print) function, since a colon `:` is missing before it.
+The error is caused by (or at least detected at) the token preceding the arrow in the example, the error is detected at the print function, since a colon `:` is missing before it.
 
 File name and line number are printed to state where the error originated.
 
@@ -285,3 +290,112 @@ File "script.py", line 1, in <module>
 ratio = 100 / 0
 ZeroDivisionError: division by zero
 ```
+
+---
+# Numbers
+
+Computers can understand much more than just strings of text. Python has a few numeric data types. It has multiple ways of storing numbers. Which one you use depends on your intended purpose for the number you are saving.
+
+An integer, or int, is a whole number. It has no decimal point and contains all counting numbers (1, 2, 3, …) as well as their negative counterparts and the number 0. If you were counting the number of people in a room, the number of jellybeans in a jar, or the number of keys on a keyboard you would likely use an integer.
+
+A floating-point number, or a float, is a decimal number. It can be used to represent fractional quantities as well as precise measurements. If you were measuring the length of your bedroom wall, calculating the average test score of a seventh-grade class, or storing a baseball player’s batting average for the 1998 season you would likely use a float.
+
+Numbers can be assigned to variables or used literally in a program:
+
+```py
+an_int = 2
+a_float = 2.1
+print(an_int + 3)
+```
+
+---
+# Data Types
+
+'Python is a strongly typed language. At runtime, it prevents typing errors and engages in little implicit type conversion.'
+
+
+Python is a strongly typed language, in the sense that at runtime it prevents typing errors and it engages in little implicit type conversion or casting, i.e. converting one type to another without a specific call to a conversion function.
+
+```py
+address = 575
+address = "575 broadway"
+```
+
+After line 1, `address` is an `int`. After line 2, `address` is a `str`.
+
+Python includes the following categories of built-in data types:
+
+- String type: `str`
+- Boolean type: `bool`
+- Binary types: `bytes`, `bytearray`, `memoryview`
+- Number types: `int`, `float`, `complex`
+- Sequence Types: `list`, `range`, `tuple`
+- Set types: `set`, `frozenset`
+- Dictionary type: `dict`
+
+## type()
+
+The `type()` function can be used to retrieve the data type of an object:
+
+```py
+message = "Hello, world!"
+
+print(type(message))
+# Output: <class 'str'>
+```
+
+## isinstance()
+
+The `isinstance()` function can be used to test if an object is an instance of a specified type. This will print a boolean value for each function call, indicating if the object is an instance of the given type:
+
+```py
+word = "purple"
+languages = ("Python", "C++", "Go")
+
+print(isinstance(word, str)) # Output: True
+print(isinstance(languages, list)) # Output: False
+print(isinstance(languages, tuple)) # Output: True
+```
+
+---
+# Casting
+
+Casting, also known as type conversion, is a process that converts a variable's data type into another data type. These conversions can be implicit (automatically interpreted) or explicit (using built-in functions).
+
+## Implicit Type Conversion
+
+The Python interpreter automatically performs type conversion on some operations without any user involvement.
+
+Python avoids data loss by converting lower data types to higher data types. For example, an integer, 7, is converted to a float when added with another float, 2.2:
+
+```py
+y = 7 + 2.2
+# Python automatically type casts y into float
+
+print(y)
+# Output: 9.2
+
+print(type(y))
+# Output: <class 'float'>
+```
+
+Since the expression above represents the sum of two `float` values, the data type of `y` is also a `float`.
+
+## Explicit Type Conversion
+
+Explicit type casting involves Python's predefined functions that act as a constructor of another data type:
+
+- The `str()` function takes an integer or float as an argument and converts it to a string.
+- The `int()` function takes a string or float as an argument converts it to an integer.
+- The `float()` function takes an integer or string as an argument and converts it to a float.
+
+## Operations on Different Types of Data
+
+When operating on data, it is important to be mindful of the data types associated with it. The following code is a flawed attempt to print the square of a number specified by the user. When run, a `TypeError` will be thrown:
+
+```py
+num = input("Please enter a number: ")
+print(num ** 2)
+```
+
+The `input()` function takes input from the user and stores it in a variable as a string. However, the `**` operator takes two numbers and returns the first number to the power of the second. In order to make the code work, the input variable must be cast to a number type.
