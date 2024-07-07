@@ -6,7 +6,7 @@ Coding is the process of transforming those ideas into a written language that a
 
 Programming languages are the tools we use to write instructions for computers to follow. Computers “think” in binary — strings of 1s and 0s. Programming languages allow us to translate the 1s and 0s into something that humans can understand and write. A programming language is made up of a series of symbols that serves as a bridge that allow humans to translate our thoughts into instructions computers can understand.
 
-#####Hello World
+##### Hello World
 `python
 my_name = "YoMama"
 print("Hello and welcome " + my_name + "!")`
@@ -34,7 +34,7 @@ print(address)
 
 
 
-####How can I use quotes inside of a string?
+#### How can I use quotes inside of a string?
 Vary your use of single quotes vs double quotes:
 
 ```py
