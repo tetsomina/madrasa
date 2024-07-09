@@ -203,9 +203,8 @@ Python evaluates an expression in order of precedence as follows:
 
 > **Note:** Items at the same precedence are evaluated left to right. The exception to this is exponentiation, which evaluates right to left.
 
-# Errors
-
 ---
+# Errors
 
 Humans are prone to making mistakes. Humans are also typically in charge of creating computer programs. To compensate, programming languages attempt to understand and explain mistakes made in their programs.
 
