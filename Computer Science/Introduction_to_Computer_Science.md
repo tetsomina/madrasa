@@ -204,6 +204,7 @@ Python evaluates an expression in order of precedence as follows:
 > **Note:** Items at the same precedence are evaluated left to right. The exception to this is exponentiation, which evaluates right to left.
 
 ---
+
 # Errors
 
 Humans are prone to making mistakes. Humans are also typically in charge of creating computer programs. To compensate, programming languages attempt to understand and explain mistakes made in their programs.
@@ -372,8 +373,6 @@ print(isinstance(languages, list)) # Output: False
 print(isinstance(languages, tuple)) # Output: True
 ```
 
----
-
 # Casting
 
 Casting, also known as type conversion, is a process that converts a variable's data type into another data type. These conversions can be implicit (automatically interpreted) or explicit (using built-in functions).
@@ -416,7 +415,9 @@ print(num ** 2)
 
 The `input()` function takes input from the user and stores it in a variable as a string. However, the `**` operator takes two numbers and returns the first number to the power of the second. In order to make the code work, the input variable must be cast to a number type.
 
-## Calculations
+---
+
+# Calculations
 
 Computers absolutely excel at performing calculations. The “compute” in their name comes from their historical association with providing answers to mathematical questions. Python performs the arithmetic operations of addition, subtraction, multiplication, and division with `+`, `-`, `*`, and `/`.
 
@@ -515,7 +516,7 @@ Python evaluates an expression in order of precedence as follows:
 
 > **Note:** Items at the same precedence are evaluated left to right. The exception to this is exponentiation, which evaluates right to left.
 
-## Changing Numbers
+# Changing Numbers
 
 Variables that are assigned numeric values can be treated the same as the numbers themselves. Two variables can be added together, divided by `2`, and multiplied by a third variable without Python distinguishing between the variables and _literals_ (like the number `2` in this example). Performing arithmetic on variables does not change the variable — you can only update a variable using the `=` sign.
 
@@ -543,7 +544,7 @@ print(number_of_coffees)
 
 We create two variables and assign numeric values to them. Then we perform a calculation on them. This doesn’t update the variables! When we update the `coffee_price` variable and perform the calculations again, they use the updated values for the variable!
 
-## Exponents
+# Exponents
 
 Python can also perform exponentiation. In written math, you might see an exponent as a superscript number, but typing superscript numbers isn’t always easy on modern keyboards. Since this operation is so related to multiplication, we use the notation `**`.
 
@@ -562,11 +563,11 @@ print(9 ** 3)
 print(4 ** 0.5)
 ```
 
-## Modulo
+# Modulo
 
 Python offers a companion to the division operator called the modulo operator. The modulo operator is indicated by `%` and gives the remainder of a division calculation. If the two numbers are divisible, then the result of the modulo operation will be 0.
 
-**Modulo** is a mathematical operation that returns the remainder of a division of two arguments. 
+**Modulo** is a mathematical operation that returns the remainder of a division of two arguments.
 
 ### Syntax
 
@@ -594,7 +595,6 @@ print(44 % 2)
 
 The modulo operator used to find the remainder of division operations. `29 % 5` equals 4, `32 % 3` equals 2, and `44 % 2` equals 0.
 
-
 ```pseudo
 print(3 % 3) # Prints 0
 print(4 % 3) # Prints 1
@@ -607,8 +607,7 @@ In each of these modulo operations, 3 is the divisor. Since `3 / 3` equals 1 wit
 
 Because of this, the modulo operator is useful in programming when we want to perform an action every nth time something occurs. Imagine you own a small café and would like for every 7th customer to receive a survey. If every customer transaction is numbered in the order they occur, you can determine which customers should receive the survey by calculating `<transaction number> % 7` — if the result is 0, hand out the survey!
 
-
-## Transaction
+# Transaction
 
 A **transaction** is an encapsulated set of instructions sent to a database that must happen as a unit. If something interrupts the transaction, such as an error, none of the instructions in the transaction occur. This ensures that there are never any partially executed transactions.
 
