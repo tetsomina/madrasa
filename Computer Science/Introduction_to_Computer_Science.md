@@ -999,6 +999,17 @@ print("Program continues at this point.")
 
 The Python `else` statement provides alternate code to execute if the expression in an if statement evaluates to `False`.
 
+`else` statements allow us to elegantly describe what we want our code to do when certain conditions are **not** met.
+
+`else` statements always appear in conjunction with `if` statements. Consider our waking-up example to see how this works:
+
+```py
+if weekday:
+  print("wake up at 6:30")
+else:
+  print("sleep in")
+```
+
 The indented code for the `if` statement is executed if the expression evaluates to `True`. The indented code immediately following the `else` is executed if and only if the expression evaluates to `False`.
 
 To mark the end of the else block, the code must be unindented to the same level as the starting if line.
@@ -1019,6 +1030,23 @@ else:
 The Python `elif` statement allows for continued checks to be performed after an initial `if` statement. An `elif` statement differs from the else statement because another expression is provided to be checked, just as with the initial `if` statement.
 
 If the expression is `True`, the indented code following the `elif` is executed. If the expression evaluates to False, the code can continue to an optional `else` statement.
+
+An elif statement checks another condition after the previous if statements conditions aren’t met.
+
+We can use elif statements to control the order we want our program to check each of our conditional statements. First, the if statement is checked, then each elif statement is checked from top to bottom, then finally the else code is executed if none of the previous conditions have been met.
+
+```py
+print("Thank you for the donation!")
+
+if donation >= 1000:
+  print("You've achieved platinum status")
+elif donation >= 500:
+  print("You've achieved gold donor status")
+elif donation >= 100:
+  print("You've achieved silver donor status")
+else:
+  print("You've achieved bronze donor status")
+```
 
 Multiple elif statements can be used following an initial `if` to perform a series of checks. Once an `elif` expression evaluates to `True`, no further `elif` statements are executed.
 
@@ -1057,9 +1085,7 @@ There are three boolean operators that we will cover:
 - or
 - not
 
----
-
-# Relational Operators: Equals and Not Equals
+### Relational Operators: Equals and Not Equals
 
 In python, we can create a boolean expression by using relational operators.
 
@@ -1104,3 +1130,126 @@ type(my_baby_bool_two)
 
 print(type(my_baby_bool_two))
 ```
+
+### Boolean Operators: not
+
+This operator is straightforward: when applied to any boolean expression it reverses the boolean value. So if we have a True statement and apply a not operator we get a False statement.
+
+```py
+not True == False
+not False == True
+```
+
+Consider the following statement:
+
+```pseudo
+Oranges are not a fruit.
+```
+
+Take the True statement oranges are a fruit and added a not operator to make the False statement oranges are not a fruit.
+
+This example in English is slightly different from the way it would appear in Python because in Python we add the not operator to the very beginning of the statement. Example:
+
+```py
+not 1 + 1 == 2  # False
+not 7 < 0       # True
+```
+
+---
+
+# Errors in Python
+
+Python refers to these mistakes as errors and will point to the location where an error occurred with a `^` character. When programs throw errors that we didn’t expect to encounter we call those errors bugs. Programmers call the process of updating the program so that it no longer produces unexpected errors debugging.
+
+Two common errors that we encounter while writing Python are SyntaxError and NameError.
+
+- `SyntaxError` means there is something wrong with the way your program is written — punctuation that does not belong, a command where it is not expected, or a missing parenthesis can all trigger a SyntaxError.
+
+- A `NameError` occurs when the Python interpreter sees a word it does not recognize. Code that contains something that looks like a variable but was never defined will throw a NameError.
+
+## Syntax Errors
+
+`SyntaxError` means there is something wrong with the way your program is written — punctuation that does not belong, a command where it is not expected, or a missing parenthesis can all trigger a `SyntaxError`.
+
+```py
+File "script.py", line 1
+  print(Hello world!)
+                  ^
+SyntaxError: invalid syntax
+```
+
+The parser repeats the offending line and displays a little arrow `^` pointing at the earliest point in the line where the error was detected.
+
+The interpreter will tell us where (the file name and line number) it got into trouble and its best guess as to what is wrong.
+
+## Exceptions
+
+Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called exceptions and are not unconditionally fatal.
+
+### Value Error
+
+`ValueError` is thrown when a function's argument is of the correct type, but an inappropriate value, such as being out of range.
+
+```shell
+Traceback (most recent call last):
+File "script.py", line 1, in <module>
+int('xyz')
+ValueError: invalid literal for int() with base 10: 'xyz'
+```
+
+### Name Error
+
+`NameError` is thrown when an object could not be found.
+
+```shell
+Traceback (most recent call last):
+File "script.py", line 1, in <module>
+age
+NameError: name 'age' is not defined
+```
+
+### Index Error
+
+`IndexError` is thrown when trying to access an item at an invalid index.
+
+```shell
+Traceback (most recent call last):
+File "script.py", line 1, in <module>
+employees[3]
+IndexError: list index out of range
+```
+
+### Module Not Found Error
+
+`ModuleNotFoundError` is thrown when a module could not be found.
+
+```shell
+Traceback (most recent call last):
+File "script.py", line 1, in <module>
+import notamodule
+ModuleNotFoundError: No module named 'notamodule'
+```
+
+### Type Error
+
+`TypeError` is thrown when a function's argument is of an inappropriate type.
+
+```shell
+Traceback (most recent call last):
+File "script.py", line 1, in <module>
+max(True)
+TypeError: 'bool' object is not iterable
+```
+
+### Zero Division Error
+
+`ZeroDivisionError` is thrown when the second operator in the division is zero.
+
+```shell
+Traceback (most recent call last):
+File "script.py", line 1, in <module>
+ratio = 100 / 0
+ZeroDivisionError: division by zero
+```
+
+---
